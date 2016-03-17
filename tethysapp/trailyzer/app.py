@@ -8,11 +8,11 @@ class TrailAnalyzer(TethysAppBase):
 
     name = 'Trail Analyzer'
     index = 'trailyzer:home'
-    icon = 'trailyzer/images/icon.gif'
+    icon = 'trailyzer/images/Bike.ico'
     package = 'trailyzer'
     root_url = 'trailyzer'
     color = '#1abc9c'
-    description = 'Place a brief description of your app here.'
+    description = 'This app uses Web Processing Services to give a trails elevation profile.'
     enable_feedback = False
     feedback_emails = []
 
