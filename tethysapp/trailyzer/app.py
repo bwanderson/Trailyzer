@@ -26,6 +26,10 @@ class TrailAnalyzer(TethysAppBase):
         url_maps = (UrlMap(name='home',
                            url='trailyzer',
                            controller='trailyzer.controllers.home'),
+                    (UrlMap(name='Example',
+                            url='Example',
+                            controller='trailyzer.controllers.Example')
+                     )
         )
 
         return url_maps

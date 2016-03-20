@@ -10,3 +10,7 @@ def home(request):
     context = {}
 
     return render(request, 'trailyzer/home.html', context)
+
+def Example(request):
+    context={}
+    return render(request, 'trailyzer/Example.html',context)
