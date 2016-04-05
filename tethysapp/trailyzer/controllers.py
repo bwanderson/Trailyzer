@@ -14,3 +14,15 @@ def home(request):
 def Example(request):
     context={}
     return render(request, 'trailyzer/Example.html',context)
+
+def ExampleA(request):
+    context={}
+    return render(request, 'trailyzer/ExampleA.html',context)
+
+def EndUser(request):
+    context={}
+    return render(request, 'trailyzer/EndUser.html',context)
+
+def TechnicalSpecs(request):
+    context={}
+    return render(request, 'trailyzer/TechnicalSpecs.html',context)

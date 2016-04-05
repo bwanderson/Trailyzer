@@ -14,15 +14,9 @@
 
 {% block app_navigation_items %}
   <li class="title">App Navigation</li>
-  <!--<li class="active"><a href="">Home</a></li>-->
-  <!--<li><a href="">Jobs</a></li>-->
-  <!--<li><a href="">Results</a></li>-->
-  <!--<li class="title">Steps</li>-->
-  <!--<li><a href="">1. The First Step</a></li>-->
-  <!--<li><a href="">2. The Second Step</a></li>-->
-  <!--<li><a href="">3. The Third Step</a></li>-->
-  <!--<li class="separator"></li>-->
-  <!--<li><a href="">Get Started</a></li>-->
+  <li><a href="{% url 'trailyzer:home' %}">Home</a></li>
+  <li><a href="{% url 'trailyzer:EndUser' %}">Help Documentation</a></li>
+  <li><a href="{% url 'trailyzer:TechnicalSpecs' %}">Technical Specifications</a></li>
 {% endblock %}
 
 {% block app_content %}
@@ -33,8 +27,6 @@
 
 {% block content_dependent_styles %}
   {{ block.super }}
-  <!--<link href="{% static 'trailyzer/css/ol.css' %}" rel="stylesheet"/>-->
-  <!--<link href="{% static 'trailyzer/css/main.css' %}" rel="stylesheet"/>-->
   <link rel="stylesheet" href="https://js.arcgis.com/3.16/esri/css/esri.css">
 
 
