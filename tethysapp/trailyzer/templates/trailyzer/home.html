@@ -5,22 +5,37 @@
 {% block app_content %}
 
     <style>
-      .map {
-        height: 500px;
+      html, body, #mainWindow {
+        font-family: sans-serif;
+        height: 100%;
         width: 100%;
       }
-
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      #header {
+        height: 80px;
+        overflow: auto;
+        padding: 0.5em;
+      }
     </style>
 
   	<!-- Show some information to the user using basic HTML -->
     <h2>Analyze Trails Worldwide</h2>
 
-    <!-- Specify a div tag area that will hold the map itself. -->
-    <!--This is where the map location is defined. It is referenced from the main.js file-->
-    <div id="map" class="map">
-        <!-- We need a piece of real estate for the pop up bubble, within the map space. -->
-        <!--<div id="popup" class="popup"></div>-->
+  <div class="nihilo">
+
+  <div id="mainWindow">
+    <div id="header">
+      <span>Draw:<br /></span>
+      <button data-dojo-type="dijit/form/Button">Polyline</button>
+      <button data-dojo-type="dijit/form/Button">Freehand Polyline</button>
     </div>
+    <div id="map"></div>
+    <div id="container" style="min-width: 310px; height: 250px; margin: 0 auto"></div>
+  </div>
+  </div>
 
     <!--The main.js file contains the JavaScript to build the map and do crap with it-->
 
