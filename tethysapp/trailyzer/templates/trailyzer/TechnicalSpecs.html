@@ -4,6 +4,55 @@
 
 {% block app_content %}
 
+<h1><font size="40"><font color="#1a1a1a">Technical Specifications</font></font></h1>
+<h2><font color="#00664b">Purpose</font></h2>
+<p>This Tethys application has been built to display elevation profiles for a user created line at any point in the world.</p>
+
+<p>This software was developed based on the Tethys platform (tethysplatform.org) using the default Tethys stack as a base for development.</p>
+
+<p>These tools were built by Savannah Keane and Bryce Anderson as part of the GIS Programming course at Brigham Young University in the Civil and Environmental Engineering Department. This software is licensed under the MIT License as follows:</p>
+
+<p>Copyright (c) 2016 Bryce Anderson</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p><i>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</i></p>
+
+<p>This software is hosted on github.com and can be accessed at github.com/bwanderson/Trailyzer. The software requires the availability of an instance of Tethys to host the app, and can be installed in a Tethys instance directly from source, based on instructions available at tethysplatform.org.</p>
+
+<h2><font color="#00664b">Software Design Specifications</font></h2>
+
+<p>This section includes information regarding the design of the software, including purpose, code design, required data files and structure, and a workflow process. The software is designed to be used as a web application, hosted in the Tethys environment. Once installed in the Tethys environment the software will perform with minimal maintenance, although user customizations could be made in the code. Instructions to setup a Tethys environment on a server, as well as to install the app from source can be found on the Tethys website at tethysplatform.org.</p>
+
+<h2><font color="#00664b">Purpose</font></h2>
+
+<p>This software was designed to elevation profiles for any location in the world. In conjunction with this application geoprocessing functions were created and hosted on an ArcGIS server, where the profiles are created based on user input.</p>
+
+<h2><font color="#00664b">Code Structures</font></h2>
+
+<p>The code structure is patterned after the default Tethys stack, based on the Model-View-Controller pattern of programming, with the default Tethys stack being used to originally create the software. A separate file exists for the base HTML page, the main HTML page, and the JavaScript used by the map. All required data for display, including the .kml files, are included in the default application programming structure developed for the Tethys Platform.</p>
+
+<h2><font color="#00664b">Main Data Files</font></h2>
+
+<p>It is necessary to install the Tethys application from source in a Tethys environment in order to run. No data is required by the end user for the proper use of the app. The user will be required to input a line of interest, which will be passed to the geoprocesser for analysis.</p>
+
+<h2><font color="#00664b">Key Functions</font></h2>
+
+<p>For assistance in reviewing the source code there are several primary components to the key functionality of the App that will be reviewed here. Each reviewed piece of functionality is essential to understand how to update or incorporate changes into this app in the future. In the app.py file the URL map function is defined to the map.</p>
+
+<p>There are several .html files included in the app, base.html and home.html, and documentation .html pages. Each is important in its functionality. The file base.html populates the app navigation items, as well as defining defaults such as the app banner and image, as well as providing links to JavaScript files that are hosted online and provide functionality. The home.html file defines the location of the app content, including the map location. The home.html file references the content of the JavaScript file by calling the map id inside a division tag.</p>
+
+<p>The main.js file provides unique functionality for this application. The main.js file references several other JavaScript files, which are hosted online by ESRI, and are linked through the base.html file, and listed prior to the main.js file. The main.js file provides functionality for drawing a line on the map, and then passing the line to the geoprocessor, where it is analyzed and returns profile elevation information.</p>
+
+<h2><font color="#00664b">User Interface Elements</font></h2>
+
+<p>The app provides a user interface that consists of the map and two buttons along the top to determine if the user is going to input a polyline or a freehand polyline. The sidebar can be collapsed to increase the width of the map. The user interface can be seen in the following picture. After a polyline has been drawn the elevation profile will be displayed underneath the map area.</p>
+
+<a href="http://s359.photobucket.com/user/skdancingchic/media/Figure1_zpsrlji2uvz.jpg.html" target="_blank">
+    <img src="http://i359.photobucket.com/albums/oo33/skdancingchic/Figure1_zpsrlji2uvz.jpg" border="0" alt="Figure1 photo Figure1_zpsrlji2uvz.jpg"/>
+</a>
 {% endblock %}
 
 {% block app_actions %}

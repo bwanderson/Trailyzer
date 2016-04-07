@@ -4,6 +4,70 @@
 
 {% block app_content %}
 
+<h1><font size="40"><font color="#1a1a1a">End User Documentation</font></font></h1>
+<h2><font color="#00664b">Purpose</font></h2>
+<p>The purpose of the project, “Trail Analyzer” is to analyze and build an elevation profile of a trail anywhere in the world.
+    In Figure 1, you can see a screenshot of the interactive map with a line drawn and an elevation profile output at the bottom of the page.
+    The map makes it easy to quickly get a reading of how difficult or easy a trail can be to bike or walk.
+    The app can use either a polyline or freehand polyline so the user can easily map out any trail.
+    The app pings Esri’s worldwide Data Elevation Model, so an analysis anywhere on the world can be completed. </p>
+
+<a href="http://s359.photobucket.com/user/skdancingchic/media/Figure1_zpsrlji2uvz.jpg.html" target="_blank">
+    <img src="http://i359.photobucket.com/albums/oo33/skdancingchic/Figure1_zpsrlji2uvz.jpg" border="0" alt="Figure1 photo Figure1_zpsrlji2uvz.jpg"/>
+</a>
+
+<h2><font color="#00664b">Obtain and Install the Software</font></h2>
+<p>The app can be found on tethys.byu.edu.
+    The code is being hosted on a computer at byu and is also being hosted on github.
+    The code can be obtained through Bryce Anderson’s account on github and is located in a folder called Trailyzer.
+    To access this code on github, Bryce can be contacted at anderson.brycew@gmail.com.
+    The code was created in VirtualBox and functions on a Tethys platform. </p>
+
+<h2><font color="#00664b">Using the Website</font></h2>
+<p>The web site features an interactive map as the main focus of the page.
+    Above the map are two buttons that function as tools to draw the desired trail over the map.
+    An elevation profile graph appears below the map after a line is drawn.
+    On the left of the screen the different tabs can be seen.
+    These tabs navigate to other pages on the app that give information about the app.</p>
+
+<p>The first button is labeled Polyline.
+    This button functions by making multiple clicks on the map to draw connected straight lines and
+    double clicking to finish the line.
+    The functionality of the Polyline button can be seen in Figure 2.</p>
+
+<a href="http://s359.photobucket.com/user/skdancingchic/media/Figure2_zpsndf6di58.jpg.html" target="_blank">
+    <img src="http://i359.photobucket.com/albums/oo33/skdancingchic/Figure2_zpsndf6di58.jpg" border="0" alt="Figure2 photo Figure2_zpsndf6di58.jpg"/>
+</a>
+
+<p>The other button is labeled Freehand Polyline. This button functions for the same purpose but
+    can draw a curved line. To use this button you click on the map and hold down as you draw the line,
+    then release when you have finished the line. An example of the freehand polyline can be seen in Figure 3.
+    When any line is drawn, the line is red as it is still drawing and turns black when the drawing is completed.
+    It takes about 45 seconds for the elevation profile to appear below the map after a line is drawn. When either
+    the polyline or freehand polyline buttons are clicked, the app deletes any existing lines on the map. </p>
+
+<a href="http://s359.photobucket.com/user/skdancingchic/media/Figure3_zpsldrgrsy0.jpg.html" target="_blank">
+    <img src="http://i359.photobucket.com/albums/oo33/skdancingchic/Figure3_zpsldrgrsy0.jpg" border="0" alt="Figure3 photo Figure3_zpsldrgrsy0.jpg"/>
+</a>
+
+<p>The elevation profile graph, which appears at the bottom of the screen, functions when a line is drawn. It will only show one elevation line in an instance; this can be seen in Figure 4. For shorter trail lines that are more zoomed in on the map, the elevation profile will load and appear faster. Regardless of the length of the line, the app will have some delay between the time the trail was drawn and when the elevation profile appears. This is because an arcmap model is running on the data and the app has to ping a different server where the model and DEM is being hosted.</p>
+
+<a href="http://s359.photobucket.com/user/skdancingchic/media/Figure4_zpscdn46dcl.jpg.html" target="_blank">
+    <img src="http://i359.photobucket.com/albums/oo33/skdancingchic/Figure4_zpscdn46dcl.jpg" border="0" alt="Figure4 photo Figure4_zpscdn46dcl.jpg"/>
+</a>
+
+<p>The elevation profile reads the height in feet on the y-axis of the graph. On the x-axis there is the distance in feet of the trail. This distance starts at zero, which is the beginning point of the trail that was defined when the trail was drawn. This profile can help one to analyze how much change there is in a certain distance. When the cursor hovers over the profile line, a popup appears with a reading of the distance on top and the elevation on bottom. An example of the popup can be seen in Figure 5. On the top right of the graph there is a button that appears as three small bars. If that is clicked, a dropdown box appears with options for downloading the graph. This is useful for someone wanting to take a print out of the elevation profile with them on their bike ride or hike. This makes the app become more useful in the field. An example of this dropdown can be seen in Figure 6.</p>
+
+<a href="http://s359.photobucket.com/user/skdancingchic/media/6b351e9a-78a1-4abc-a8c4-c9a11828e8ae_zpsrjnvhtzo.jpg.html" target="_blank">
+    <img src="http://i359.photobucket.com/albums/oo33/skdancingchic/6b351e9a-78a1-4abc-a8c4-c9a11828e8ae_zpsrjnvhtzo.jpg" border="0" alt=" photo 6b351e9a-78a1-4abc-a8c4-c9a11828e8ae_zpsrjnvhtzo.jpg"/>
+</a>
+
+<a href="http://s359.photobucket.com/user/skdancingchic/media/f8523f71-2c27-4800-8e48-5c0af1a7f388_zpsccfhfig5.jpg.html" target="_blank">
+    <img src="http://i359.photobucket.com/albums/oo33/skdancingchic/f8523f71-2c27-4800-8e48-5c0af1a7f388_zpsccfhfig5.jpg" border="0" alt=" photo f8523f71-2c27-4800-8e48-5c0af1a7f388_zpsccfhfig5.jpg"/>
+</a>
+
+<p>This document can be found in the “Help Documentation” tab of the app. The technical and design document can be found in the “Technical Specifications” tab of the app. All these tabs can be navigated between eachother. In the top left corner of the app is another button with three small bars. Pushing this makes the tab block disappear and reappear. Selecting the Exit button in the top right of the app exits out of the app and returns to the main tethys page with all the hosted apps.</p>
+
 {% endblock %}
 
 {% block app_actions %}
