@@ -60,6 +60,7 @@
     }
 
     function addToMap(evt) {
+    map.setMapCursor("progress");
       var symbol;
       toolbar.deactivate();
       map.showZoomSlider();
@@ -146,5 +147,6 @@
         data: elevation_values
     }]
 });
+map.setMapCursor("auto");
     }
   });
